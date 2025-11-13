@@ -25,16 +25,3 @@ pip install customtkinter
 pip install qrcode
 pip install tkinter
 ```
-
----
-
-## Usage
-
-```
-python main.py
-```
-or run main.exe in the QRcode-app directory
-
-1. Enter text or link.
-2. Click **Generate QR Code** to preview.
-3. Click **Save QR Code** to save as PNG.
