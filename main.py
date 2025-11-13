@@ -16,11 +16,11 @@ class QRCodeGenerator:
         title_label = ttk.Label(self.root, text="QR Code Generator", font=("Arial", 20, "bold"))
         title_label.pack(pady=20)
 
-        input_label = ttk.Label(self.root, text="Enter text, link, or file path:")
+        input_label = ttk.Label(self.root, text=f"Enter text or link")
         input_label.pack(pady=5)
 
         self.data_entry = ttk.Entry(self.root, width=50)
-        self.data_entry.pack(pady=10)
+        self.data_entry.pack(pady=0)
 
         button_frame = ttk.Frame(self.root)
         button_frame.pack(pady=5)
