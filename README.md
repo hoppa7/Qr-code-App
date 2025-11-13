@@ -15,13 +15,10 @@ A simple Python GUI app to generate QR codes from text, URLs, or file paths and 
 ## Requirements
 
 * Python 3.7+
-* Libraries: qrcode, Pillow, customtkinter, tkinter
+* Libraries: qrcode, Pillow, customtkinter
 
 Install dependencies:
 
 ```
-pip install qrcode[pil] pillow
-pip install customtkinter
-pip install qrcode
-pip install tkinter
+pip install -r requirements.txt
 ```
