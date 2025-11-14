@@ -38,10 +38,13 @@ class QRCodeGenerator:
         button_frame.pack(pady=5)
 
         generate_btn = ctk.CTkButton(button_frame, text="Generate QR Code", command=self.generate_qrcode)
-        generate_btn.pack(side="left", padx=5)
+        generate_btn.pack(side="left", padx=3)
 
         save_btn = ctk.CTkButton(button_frame, text="Save QR Code", command=self.save_qrcode)
-        save_btn.pack(side="left", padx=5, pady=5)
+        save_btn.pack(side="left", padx=3, pady=5)
+
+        remove_btn = ctk.CTkButton(button_frame, text="Remove QR Code", command=self.remove_qrcode)
+        remove_btn.pack(side="left", padx=3)
 
         self.theme_menu = ctk.CTkOptionMenu(
             self.root,
@@ -76,6 +79,9 @@ class QRCodeGenerator:
         self.qr_image = ctk.CTkImage(light_image=qr_img, dark_image=qr_img, size=(250, 250))
         self.qr_label.pack(pady=50)
         self.qr_label.configure(image=self.qr_image, text="")
+
+    def remove_qrcode(self):
+        self.qr_label.pack_forget()
 
     def save_qrcode(self):
         if not hasattr(self, "qr_image"):
