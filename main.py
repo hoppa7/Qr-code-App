@@ -23,8 +23,6 @@ class QRCodeGenerator:
         title_label = tk.Label(self.root, text="QR Code Generator", font=("Arial", 20, "bold"), bg="#d1eaff", fg="black")
         title_label.pack(pady=20)
 
-        input_label = tk.Label(self.root, text="Enter text or link", bg="#d1eaff", fg="black", font=("Arial", 10))
-        input_label.pack(pady=(5, 0))
 
         self.data_entry = ctk.CTkEntry(
             self.root,
@@ -76,7 +74,7 @@ class QRCodeGenerator:
         qr_img = qrcode.make(data)
         qr_img = qr_img.resize((250, 250))
         self.qr_image = ctk.CTkImage(light_image=qr_img, dark_image=qr_img, size=(250, 250))
-        self.qr_label.pack(pady=20)
+        self.qr_label.pack(pady=50)
         self.qr_label.configure(image=self.qr_image, text="")
 
     def save_qrcode(self):
